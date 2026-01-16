@@ -62,6 +62,39 @@ fun main() {
    println("Not equal to operator check for r and o is ${r != o}")
 
    // Logical Operators
+   val areBothEven = r % 2 == 0 && o % 2 == 0
+   val areOneOfThenEven = r % 2 == 0 || o % 2 == 0
+   val areBothNotEven = r % 2 == 0 && !(o % 2 == 0)
+
+   println("Is r and o both even number? ${areBothEven}") // Logical AND: true && true → true
+   println("Is r and o one of them even number? ${areOneOfThenEven}") // Logical OR: false || true → true
+   println("Is r and o not both even number? ${areBothNotEven}") // Logical Not:  ! → true
+
+   // Null safety operator 🔹🔹🔹 New in Kotlin
+   // ?: → Elvis Operator
+   // ?. → Safe Call Operator
+   // !! → non-null assertion operator 🔹 The operator removes the null restriction from a variable. 🔹 But if that variable is null, your program crashes.
+
+   println("Please enter a number: ")
+   val input = readln()
+   val inputAsInteger = input.toIntOrNull() ?: 0 // assign default value
+   val inputAsIntegerWithIncrement = input.toIntOrNull()?.inc() // incremental value
+   val inputAsIntegerWithMod = input.toIntOrNull()?.rem(2) == 0 // mod check
+   val inputAsIntegerWithModEqualCheck = input.toIntOrNull()?.rem(2)?.equals(0) // mod check
+   val isNotNull = input.toIntOrNull()?.equals(0)!!
+   val name: String? = "Farya"
+
+   println("Your input is: $inputAsInteger")
+   println("Your input incremental is: $inputAsIntegerWithIncrement")
+   println("Is Even: $inputAsIntegerWithMod")
+   println("Is Even: $inputAsIntegerWithModEqualCheck")
+   println("Is the number NotNull? $isNotNull")
+   println(" Farya string length is ${name!!.length}")  // Works fine
+
+   val inputInteger = input.toIntOrNull()
+   val isEven = inputInteger // https://www.youtube.com/watch?v=dzUc9vrsldM 47 minuts
+   println("Is the number even? $isEven")
+
 
 
 
