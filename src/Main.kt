@@ -31,5 +31,40 @@ fun main() {
    println("Division m / n = ${m / n}")
    println("Modulus m % n = ${m % n}")
 
+   var p = 11
+   p++
+   var q = 9
+   q--
+   println("Addition of p, q is ${p+q}")
+   println("Increment of p = $p")
+   println("Decrement of q = $q")
+
+   p += 5
+   q -= 5
+   println("Subtraction of p, q is ${p-q}")
+   println("Increment of p = $p")
+   println("Decrement of q = $q")
+
+   //Comparison Operators
+   val r = 11
+   val o = 9
+   println("Value of r is $r")
+   println("Value of o is $o")
+
+   val areNumbersTheSame = r == o
+
+   println("Equal to operator check for r and o is ${areNumbersTheSame}")
+   println("r % 2 Equal to 0 is ${r % 2 == 0}")
+   println("Greater than operator check for r and o is ${r > o}")
+   println("Less than operator check for r and o is ${r < o}")
+   println("Greater than or equal to operator check for r and o is ${r >= o}")
+   println("Less than or equal to operator check for r and o is ${r <= o}")
+   println("Not equal to operator check for r and o is ${r != o}")
+
+   // Logical Operators
+
+
+
+
 
 }
